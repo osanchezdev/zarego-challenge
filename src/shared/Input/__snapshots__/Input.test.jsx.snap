@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input component should render component 1`] = `
+<div
+  className="input__main_wrapper"
+>
+  <div
+    className="input_label__wrapper"
+  >
+    <label
+      htmlFor="labelTest"
+    >
+      labelTest
+    </label>
+  </div>
+  <div
+    className="input__wrapper"
+  >
+    <input
+      className="input "
+      id="labelTest"
+      name="labelTest"
+      onBlur={null}
+      onChange={null}
+      placeholder=""
+      type="text"
+    />
+    <div
+      className="input__error_msg_wrapper"
+    />
+  </div>
+</div>
+`;
