@@ -1,0 +1,7 @@
+.zarego_logo {
+  cursor: pointer;
+  max-width: 100%;
+}
+.zarego_logo .default_logo {
+  cursor: default;
+}
