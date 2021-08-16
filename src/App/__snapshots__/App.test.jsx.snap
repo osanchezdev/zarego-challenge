@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App component should render component 1`] = `
+<main
+  className="app"
+>
+  <div
+    className="app_logo_wrapper"
+  >
+    <div>
+      <img
+        alt="Zarego"
+        className="zarego_logo"
+        onClick={[Function]}
+        src="logo.png"
+      />
+    </div>
+  </div>
+  <div
+    className="popup__overlay popup__overlay_show"
+    onClick={[Function]}
+    role="dialog"
+  >
+    <div
+      aria-hidden={true}
+      className="popup__wrapper"
+      onClick={[Function]}
+    >
+      <h1>
+        Popup content
+      </h1>
+    </div>
+  </div>
+</main>
+`;

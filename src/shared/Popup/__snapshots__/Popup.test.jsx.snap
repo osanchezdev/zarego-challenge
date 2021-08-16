@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Popup component should render component 1`] = `
+<div
+  className="popup__overlay "
+  onClick={[Function]}
+  role="dialog"
+>
+  <div
+    aria-hidden={true}
+    className="popup__wrapper"
+    onClick={[Function]}
+  >
+    <span>
+      children
+    </span>
+  </div>
+</div>
+`;

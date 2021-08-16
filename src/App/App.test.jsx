@@ -4,14 +4,22 @@ import renderer from 'react-test-renderer';
 import App from './App';
 
 describe('App component', () => {
+  beforeEach(() => {
+    render(<App />);
+  });
+
   it('should render component', () => {
     const tree = renderer.create(<App />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 
-  it('should render "hello world"', () => {
-    render(<App />);
-    const container = screen.getByText(/hello world/i);
-    expect(container).toBeInTheDocument();
+  it('should render zarego logo', () => {
+    const logo = screen.getByAltText(/zarego/i);
+    expect(logo).toBeInTheDocument();
+  });
+
+  it('should render popup', async () => {
+    const popup = await screen.getByRole('dialog');
+    expect(popup).toBeInTheDocument();
   });
 });
