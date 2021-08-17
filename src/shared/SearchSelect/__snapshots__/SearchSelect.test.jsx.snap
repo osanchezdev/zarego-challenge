@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchSelect component should render component 1`] = `
+<div
+  className="search_select__main_wrapper"
+>
+  <div>
+    <div
+      className="input__main_wrapper"
+    >
+      <div
+        className="input_label__wrapper"
+      >
+        <label
+          htmlFor="labelTest"
+        >
+          labelTest
+        </label>
+      </div>
+      <div
+        className="input__wrapper"
+      >
+        <input
+          className="input  input_icon"
+          id="labelTest"
+          name="labelTest"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          placeholder="Type to search"
+          type="text"
+        />
+        <img
+          alt="input-icon"
+          className="input_icon_image"
+          src="search.svg"
+        />
+        <div
+          className="input__error_msg_wrapper"
+        />
+      </div>
+    </div>
+  </div>
+  <div
+    className="search_select__list_wrapper "
+  />
+</div>
+`;

@@ -1,0 +1,45 @@
+.search_select__main_wrapper {
+  position: relative;
+}
+
+.search_select__list_wrapper {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  top: 75px;
+  width: 100%;
+  max-height: 170px;
+  overflow: auto;
+}
+
+.search_select__list_wrapper.show {
+  opacity: 1;
+}
+
+.search_select__list {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.search_select__list_item {
+  cursor: pointer;
+  position: relative;
+  background: #eee;
+  margin: 0;
+  padding: 12px;
+}
+
+.search_select__list_item:hover {
+  background: #ddd;
+  transition: background 300ms ease;
+}
+
+.search_select__list_item_empty {
+  position: relative;
+  background: #eee;
+  margin: 0;
+  padding: 12px;
+  text-align: center;
+}
