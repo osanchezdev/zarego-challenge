@@ -5,6 +5,7 @@ import ZaregoLogo from '../shared/ZaregoLogo/ZaregoLogo';
 
 function App() {
   const [showPopup, setShowPopup] = useState(true);
+
   return (
     <main className={styles.app}>
       <div className={styles.app_logo_wrapper}>

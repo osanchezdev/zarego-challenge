@@ -35,6 +35,17 @@
   border: 2px inset#dc3545;
 }
 
+.input_icon_image {
+  background: transparent;
+  position: absolute;
+  max-width: 26px;
+  padding: 5px;
+}
+
+.input.input_icon {
+  padding-left: 35px;
+}
+
 .input__error_msg_wrapper {
   position: relative;
   padding: 5px 0;

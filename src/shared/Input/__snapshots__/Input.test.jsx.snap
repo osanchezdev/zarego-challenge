@@ -17,11 +17,12 @@ exports[`Input component should render component 1`] = `
     className="input__wrapper"
   >
     <input
-      className="input "
+      className="input  "
       id="labelTest"
       name="labelTest"
       onBlur={null}
       onChange={null}
+      onFocus={null}
       placeholder=""
       type="text"
     />
