@@ -11,6 +11,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+select:focus,
+select:active,
+select:focus:active,
 input:focus,
 input:active,
 input:focus:active {
