@@ -1,0 +1,32 @@
+.dropdown_select__wrapper {
+  position: relative;
+}
+
+.select_label__wrapper {
+  margin-bottom: 20px;
+}
+
+.select__wrapper {
+  position: relative;
+}
+
+.select {
+  height: 36px;
+  width: 100%;
+}
+
+.select.select_error {
+  border: 2px inset #dc3545;
+}
+
+.select_option {
+}
+
+.select_error_msg {
+  position: relative;
+  padding: 5px 0;
+  flex: 0 0 100%;
+  position: relative;
+  margin: 0;
+  color: #dc3545;
+}

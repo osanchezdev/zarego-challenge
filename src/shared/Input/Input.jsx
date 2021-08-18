@@ -29,7 +29,7 @@ const Input = React.forwardRef(
     };
     return (
       <div className={styles.input__main_wrapper}>
-        {showLabel && (
+        {label && showLabel && (
           <div className={styles.input_label__wrapper}>
             <label htmlFor={label}>{label}</label>
           </div>
