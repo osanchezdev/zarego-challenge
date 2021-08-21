@@ -6,7 +6,7 @@ const Divider = ({ text }) => (
   <div className={styles.divider__wrapper}>
     {text && (
       <div className={styles.divider_text__wrapper}>
-        <span>{text}</span>
+        <span className={styles.divider_text}>{text}</span>
       </div>
     )}
     <div role="separator" className={styles.divider} />

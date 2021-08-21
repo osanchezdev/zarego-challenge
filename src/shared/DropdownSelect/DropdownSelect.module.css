@@ -3,7 +3,7 @@
 }
 
 .select_label__wrapper {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .select__wrapper {
@@ -13,6 +13,9 @@
 .select {
   height: 36px;
   width: 100%;
+  min-width: 190px;
+  font-size: 20px;
+  color: #666;
 }
 
 .select.select_error {
@@ -24,7 +27,7 @@
 
 .select_error_msg {
   position: relative;
-  padding: 5px 0;
+  padding: 0;
   flex: 0 0 100%;
   position: relative;
   margin: 0;

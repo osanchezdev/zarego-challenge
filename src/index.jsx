@@ -1,4 +1,4 @@
-import '@fontsource/roboto';
+import '@fontsource/lato';
 import './styles/global.css';
 import React from 'react';
 import ReactDOM from 'react-dom';

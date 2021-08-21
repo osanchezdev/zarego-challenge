@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import styles from './App.module.css';
 import Popup from '../shared/Popup/Popup';
 import ZaregoLogo from '../shared/ZaregoLogo/ZaregoLogo';
+import AidOfferForm from '../containers/AidOfferForm/AidOfferForm';
 
 function App() {
   const [showPopup, setShowPopup] = useState(true);
@@ -12,8 +13,7 @@ function App() {
         <ZaregoLogo handleClick={() => setShowPopup(true)} />
       </div>
       <Popup show={showPopup} handleClose={() => setShowPopup(false)}>
-        <h1>Popup content</h1>
-        <div style={{ padding: '5rem' }} />
+        <AidOfferForm />
       </Popup>
     </main>
   );

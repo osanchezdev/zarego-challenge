@@ -1,9 +1,10 @@
 import React, { useRef, useState, useEffect } from 'react';
-import { string, bool, func, arrayOf, shape } from 'prop-types';
+import { string, bool, func, arrayOf } from 'prop-types';
 import styles from './SearchSelect.module.css';
 import Input from '../Input/Input';
 
 const SearchSelect = ({
+  name,
   label,
   showLabel,
   prefixText,
@@ -13,16 +14,12 @@ const SearchSelect = ({
   onSelectListItem,
   data,
 }) => {
-  const { onChange, onBlur } = controller;
   const node = useRef();
   const [showList, setShowList] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [filteredList, setFilteredList] = useState([]);
 
-  const handleChange = (e) => {
-    onChange(e);
-    setSearchQuery(e.target.value);
-  };
+  const handleChange = (e) => setSearchQuery(e.target.value);
   const handleFocus = () => setShowList(true);
   const handleSelect = (newValue) => {
     setShowList(false);
@@ -49,17 +46,17 @@ const SearchSelect = ({
     <div ref={node} className={styles.search_select__main_wrapper}>
       <div>
         <Input
-          ref={controller.ref}
           placeholder="Type to search"
+          name={name}
           label={label}
           showLabel={showLabel}
+          controller={controller}
           icon="search"
           prefixText={prefixText}
           error={error}
           errorMsg={errorMsg}
-          onChange={handleChange}
-          onFocus={handleFocus}
-          onBlur={onBlur}
+          onChangeParam={handleChange}
+          onFocusParam={handleFocus}
         />
       </div>
       <div
@@ -90,16 +87,13 @@ const SearchSelect = ({
   );
 };
 SearchSelect.propTypes = {
+  name: string.isRequired,
   label: string.isRequired,
   showLabel: bool,
   prefixText: string,
   error: bool,
   errorMsg: string,
-  controller: shape({
-    ref: func,
-    onchange: func,
-    onBlur: func,
-  }).isRequired,
+  controller: func.isRequired,
   onSelectListItem: func.isRequired,
   data: arrayOf(string).isRequired,
 };

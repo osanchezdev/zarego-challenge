@@ -12,7 +12,7 @@ exports[`SearchSelect component should render component 1`] = `
         className="input_label__wrapper"
       >
         <label
-          htmlFor="labelTest"
+          htmlFor="nameField"
         >
           labelTest
         </label>
@@ -22,9 +22,9 @@ exports[`SearchSelect component should render component 1`] = `
       >
         <input
           className="input  input_icon"
-          id="labelTest"
-          name="labelTest"
-          onBlur={[Function]}
+          id="nameField"
+          name="nameField"
+          onBlur={[MockFunction]}
           onChange={[Function]}
           onFocus={[Function]}
           placeholder="Type to search"
@@ -36,7 +36,7 @@ exports[`SearchSelect component should render component 1`] = `
           src="search.svg"
         />
         <div
-          className="input__error_msg_wrapper"
+          className="input__error_msg_wrapper "
         />
       </div>
     </div>

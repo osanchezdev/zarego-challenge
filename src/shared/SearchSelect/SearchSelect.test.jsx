@@ -13,21 +13,23 @@ import SearchSelect from './SearchSelect';
 import { COLLEGES_DATA as testData } from '../../data';
 
 describe('SearchSelect component', () => {
-  const { labelText, controller, onSelectListItem, placeholder } = {
+  const controller = () => ({
+    ref: jest.fn(),
+    onChange: jest.fn(),
+    onBlur: jest.fn(),
+  });
+  const { labelText, name, onSelectListItem, placeholder } = {
     placeholder: 'Type to search',
     labelText: 'labelTest',
-    controller: {
-      ref: () => {},
-      onChange: () => {},
-      onBlur: () => {},
-    },
-    onSelectListItem: () => {},
+    name: 'nameField',
+    onSelectListItem: jest.fn(),
   };
   it('should render component', () => {
     const tree = renderer
       .create(
         <SearchSelect
           label={labelText}
+          name={name}
           controller={controller}
           data={testData}
           onSelectListItem={onSelectListItem}
@@ -41,6 +43,7 @@ describe('SearchSelect component', () => {
     render(
       <SearchSelect
         label={labelText}
+        name={name}
         controller={controller}
         data={testData}
         onSelectListItem={onSelectListItem}
@@ -56,6 +59,7 @@ describe('SearchSelect component', () => {
     render(
       <SearchSelect
         label={labelText}
+        name={name}
         controller={controller}
         data={testData}
         onSelectListItem={onSelectListItem}
@@ -76,6 +80,7 @@ describe('SearchSelect component', () => {
     render(
       <SearchSelect
         label={labelText}
+        name={name}
         controller={controller}
         data={testData}
         onSelectListItem={onSelectListItem}

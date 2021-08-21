@@ -4,7 +4,7 @@
 
 .input_label__wrapper {
   position: relative;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .input__wrapper {
@@ -23,6 +23,9 @@
 .input {
   flex: 1 1 auto;
   height: 30px;
+  min-width: 182px;
+  font-size: 20px;
+  color: #666;
 }
 
 .input:focus,
@@ -44,12 +47,16 @@
 
 .input.input_icon {
   padding-left: 35px;
+  min-width: 149px;
 }
 
 .input__error_msg_wrapper {
   position: relative;
-  padding: 5px 0;
   flex: 0 0 100%;
+}
+
+.input__with_prefix_text {
+  padding-left: 30px;
 }
 
 .input__error_msg {

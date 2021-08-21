@@ -10,6 +10,7 @@
   width: 100%;
   max-height: 170px;
   overflow: auto;
+  z-index: 1;
 }
 
 .search_select__list_wrapper.show {
