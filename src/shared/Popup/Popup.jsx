@@ -1,24 +1,27 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import { oneOfType, node, arrayOf, bool, func } from 'prop-types';
 import styles from './Popup.module.css';
 
-const Popup = ({ children, show, handleClose }) => (
-  <div
-    role="dialog"
-    className={`${styles.popup__overlay} ${
-      show ? styles.popup__overlay_show : ''
-    }`}
-    onClick={handleClose}
-  >
+const Popup = ({ children, show, handleClose }) =>
+  ReactDOM.createPortal(
     <div
-      aria-hidden
-      className={styles.popup__wrapper}
-      onClick={(e) => e.stopPropagation()}
+      role="dialog"
+      className={`${styles.popup__overlay} ${
+        show ? styles.popup__overlay_show : ''
+      }`}
+      onClick={handleClose}
     >
-      {children}
-    </div>
-  </div>
-);
+      <div
+        aria-hidden
+        className={styles.popup__wrapper}
+        onClick={(e) => e.stopPropagation()}
+      >
+        {children}
+      </div>
+    </div>,
+    document.body
+  );
 
 Popup.propTypes = {
   children: oneOfType([arrayOf(node), node]).isRequired,

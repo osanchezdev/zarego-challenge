@@ -5,20 +5,26 @@ import DropdownSelect from './DropdownSelect';
 
 import { ADMISION_TYPES as testData } from '../../data';
 
-const { labelText, controller } = {
+const controller = () => ({
+  ref: jest.fn(),
+  onBlur: jest.fn(),
+  onChange: jest.fn(),
+});
+const { labelText, name } = {
   labelText: 'labelTest',
-  controller: {
-    ref: jest.fn(),
-    onBlur: jest.fn(),
-    onChange: jest.fn(),
-  },
+  name: 'nameField',
 };
 
 describe('DropdownSelect component snapshot', () => {
   it('should render component', () => {
     const tree = renderer
       .create(
-        <DropdownSelect label={labelText} data={testData} {...controller} />
+        <DropdownSelect
+          label={labelText}
+          name={name}
+          data={testData}
+          controller={controller}
+        />
       )
       .toJSON();
     expect(tree).toMatchSnapshot();
@@ -27,11 +33,18 @@ describe('DropdownSelect component snapshot', () => {
 
 describe('DropdownSelect component funtional tests', () => {
   beforeAll(() =>
-    render(<DropdownSelect label={labelText} data={testData} {...controller} />)
+    render(
+      <DropdownSelect
+        label={labelText}
+        name={name}
+        data={testData}
+        controller={controller}
+      />
+    )
   );
 
   it('should render all options', () => {
     const options = screen.queryAllByRole('option');
-    expect(options).toHaveLength(testData.length);
+    expect(options).toHaveLength(testData.length + 1);
   });
 });

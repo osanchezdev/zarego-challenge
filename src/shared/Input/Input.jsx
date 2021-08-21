@@ -3,72 +3,74 @@ import { string, oneOf, bool, func } from 'prop-types';
 import styles from './Input.module.css';
 import searchIcon from '../../assets/icons/search.svg';
 
-const Input = React.forwardRef(
-  (
-    {
-      type,
-      placeholder,
-      label,
-      showLabel,
-      icon,
-      prefixText,
-      error,
-      errorMsg,
-      onChange,
-      onBlur,
-      onFocus,
-    },
-    ref
-  ) => {
-    const getIcon = () => {
-      switch (icon) {
-        case 'search':
-        default:
-          return searchIcon;
-      }
-    };
-    return (
-      <div className={styles.input__main_wrapper}>
-        {label && showLabel && (
-          <div className={styles.input_label__wrapper}>
-            <label htmlFor={label}>{label}</label>
-          </div>
+const Input = ({
+  type,
+  name,
+  controller,
+  placeholder,
+  label,
+  showLabel,
+  icon,
+  prefixText,
+  error,
+  errorMsg,
+  onChangeParam,
+  onFocusParam,
+}) => {
+  const { ref, onChange, onBlur } = controller(name);
+
+  const handleChange = (e) => {
+    onChange(e);
+    onChangeParam?.(e);
+  };
+
+  return (
+    <div className={styles.input__main_wrapper}>
+      {label && showLabel && (
+        <div className={styles.input_label__wrapper}>
+          <label htmlFor={name}>{label}</label>
+        </div>
+      )}
+      <div className={styles.input__wrapper}>
+        {prefixText && (
+          <span className={styles.input__prefix_text}>{prefixText}</span>
         )}
-        <div className={styles.input__wrapper}>
-          {prefixText && (
-            <span className={styles.input__prefix_text}>{prefixText}</span>
-          )}
-          <input
-            ref={ref}
-            className={`${styles.input} ${error ? styles.input_error : ''} ${
-              icon ? styles.input_icon : ''
-            }`}
-            type={type}
-            id={label}
-            name={label}
-            placeholder={placeholder}
-            onChange={onChange}
-            onBlur={onBlur}
-            onFocus={onFocus}
+        <input
+          className={`${styles.input} ${error ? styles.input_error : ''} ${
+            icon ? styles.input_icon : ''
+          }`}
+          type={type}
+          id={name}
+          name={name}
+          ref={ref}
+          placeholder={placeholder}
+          onChange={handleChange}
+          onBlur={onBlur}
+          onFocus={onFocusParam}
+        />
+        {icon && (
+          <img
+            src={searchIcon}
+            alt="input-icon"
+            className={styles.input_icon_image}
           />
-          {icon && (
-            <img
-              src={getIcon()}
-              alt="input-icon"
-              className={styles.input_icon_image}
-            />
-          )}
-          <div className={styles.input__error_msg_wrapper}>
-            {error && <p className={styles.input__error_msg}>{errorMsg}</p>}
-          </div>
+        )}
+        <div
+          className={`${styles.input__error_msg_wrapper} ${
+            prefixText ? styles.input__with_prefix_text : ''
+          }`}
+        >
+          {error && <p className={styles.input__error_msg}>{errorMsg}</p>}
         </div>
       </div>
-    );
-  }
-);
+    </div>
+  );
+};
 
 Input.propTypes = {
   type: oneOf(['text', 'number']),
+  name: string.isRequired,
+  controller: func.isRequired,
   placeholder: string,
   label: string.isRequired,
   showLabel: bool,
@@ -76,9 +78,8 @@ Input.propTypes = {
   prefixText: string,
   error: bool,
   errorMsg: string,
-  onChange: func,
-  onBlur: func,
-  onFocus: func,
+  onChangeParam: func,
+  onFocusParam: func,
 };
 
 Input.defaultProps = {
@@ -89,9 +90,8 @@ Input.defaultProps = {
   prefixText: null,
   error: false,
   errorMsg: null,
-  onChange: null,
-  onBlur: null,
-  onFocus: null,
+  onChangeParam: null,
+  onFocusParam: null,
 };
 
 export default Input;

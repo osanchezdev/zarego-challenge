@@ -9,7 +9,7 @@ exports[`DropdownSelect component snapshot should render component 1`] = `
   >
     <label
       className="select_label"
-      htmlFor="labelTest"
+      htmlFor="nameField"
     >
       labelTest
     </label>
@@ -19,11 +19,18 @@ exports[`DropdownSelect component snapshot should render component 1`] = `
   >
     <select
       className="select "
-      id="labelTest"
-      name="labelTest"
+      defaultValue="null"
+      id="nameField"
+      name="nameField"
       onBlur={[MockFunction]}
       onChange={[MockFunction]}
     >
+      <option
+        disabled={true}
+        value="null"
+      >
+        Select
+      </option>
       <option
         className="select_option"
         value="Freshman Student"

@@ -8,7 +8,7 @@ exports[`Input component should render component 1`] = `
     className="input_label__wrapper"
   >
     <label
-      htmlFor="labelTest"
+      htmlFor="nameField"
     >
       labelTest
     </label>
@@ -18,16 +18,16 @@ exports[`Input component should render component 1`] = `
   >
     <input
       className="input  "
-      id="labelTest"
-      name="labelTest"
-      onBlur={null}
-      onChange={null}
+      id="nameField"
+      name="nameField"
+      onBlur={[MockFunction]}
+      onChange={[Function]}
       onFocus={null}
       placeholder=""
       type="text"
     />
     <div
-      className="input__error_msg_wrapper"
+      className="input__error_msg_wrapper "
     />
   </div>
 </div>

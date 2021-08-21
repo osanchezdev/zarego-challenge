@@ -8,12 +8,9 @@ exports[`Checkbox component snapshot should render component 1`] = `
     className="checkbox_input__wrapper"
   >
     <input
-      checked={false}
       className="checkbox_input"
-      id="labelTest"
-      name="labelTest"
-      onBlur={[MockFunction]}
-      onChange={[MockFunction]}
+      id="fieldName"
+      name="fieldName"
       type="checkbox"
     />
   </div>
@@ -22,7 +19,7 @@ exports[`Checkbox component snapshot should render component 1`] = `
   >
     <label
       className="checkbox_label"
-      htmlFor="labelTest"
+      htmlFor="fieldName"
     >
       labelTest
     </label>

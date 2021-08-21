@@ -1,0 +1,42 @@
+.form__wrapper {
+  width: 100%;
+  max-width: 800px;
+}
+
+.form {
+}
+
+.form_title {
+  margin: 0;
+  font-size: 38px;
+  padding: 30px 10px 15px 10px;
+}
+
+.form_sections__wrapper {
+  padding: 15px;
+}
+
+.form_total {
+  margin: 0;
+  font-size: 36px;
+  padding: 10px 15px 40px 15px;
+}
+
+.form_total > b {
+  margin-left: 20px;
+}
+
+.form_actions__wrapper {
+  background: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 15px;
+}
+
+@media only screen and (max-width: 600px) {
+  .form_title {
+    font-size: 28px;
+    padding: 20px;
+  }
+}
