@@ -1,70 +1,75 @@
-# Getting Started with Create React App
+# Zarego challenge :punch:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[Demo](https://app)
 
-## Available Scripts
+### Tabla de contenido :rocket:
 
-In the project directory, you can run:
+- [Instalación](#instalación-wrench)
+- [Librerías principales](#librerías-package)
 
-### `yarn start`
+### Instalación :wrench:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Recomiendo usar [yarn](https://yarnpkg.com/) a la hora de iniciar el proyecto por ser más rápido y seguro que sobre [npm](https://www.npmjs.com/), de igual forma siéntase libre de usar el que guste, para efectos de esta guía estaré usando **yarn**.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+#### Scripts disponibles:
 
-### `yarn test`
+Antes de ejecutar cualquier script del proyecto es necesario **instalar las dependencias** del mismo:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+yarn install
+```
 
-### `yarn build`
+##### Start
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Este script ejecuta la app en modo de desarrollo.
+Abre http://localhost:3000 para verla en el navegador.
+Recarga automáticamente en cada cambio.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+yarn start
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+##### Build
 
-### `yarn eject`
+Este script construye la app lista para producción en el directorio de /build.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```bash
+yarn build
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+##### Lint
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Se usa para detectar errores de formato con [ESlint](https://eslint.org/).
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```bash
+yarn lint
+```
 
-## Learn More
+##### Lint:fix
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Se usa para darle el formato correcto al proyecto.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+yarn lint:fix
+```
 
-### Code Splitting
+##### Test
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Ejecuta el manejador de tareas [(Jest)](https://jestjs.io/) con modo watch para actualizar mientras se editan los test.
 
-### Analyzing the Bundle Size
+```bash
+yarn test
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Librerías principales :package:
 
-### Making a Progressive Web App
+Librerías usadas en el proyecto:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- [React](https://es.reactjs.org/), librería de Javascript para la creación de interfaces de usuario. Se usó para crear los distintos componentes que requería la app.
+- [React-hook-form](https://react-hook-form.com/), librería de React para la validación de formularios, en su página oficial muestran su rendimiento frente a otras populares como Formik o Redux-form.
 
-### Advanced Configuration
+Como dependecias de desarrollo tenemos:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- [Jest](https://jestjs.io/), framework de testing de Javascript enfocado en la simplicidad.
+- [ESlint](https://eslint.org/), herramienta de análisis de código estático, ayuda a escribir código consistente a lo largo del proyecto.
+- [Prettier](https://prettier.io/), herramienta para formatear el código de forma automática.
