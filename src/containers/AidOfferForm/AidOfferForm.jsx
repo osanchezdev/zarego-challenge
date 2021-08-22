@@ -7,6 +7,7 @@ import styles from './AidOfferForm.module.css';
 import SchoolFormSection from './SchoolFormSection/SchoolFormSection';
 import GrantsAndScholarshipsSection from './GrantsAndScholarshipsSection/GrantsAndScholarshipsSection';
 import WorkStudyProgramsSection from './WorkStudyProgramsSection/WorkStudyProgramsSection';
+import Button from '../../shared/Button/Button';
 
 const AidOfferForm = () => {
   const methods = useForm({
@@ -72,11 +73,10 @@ const AidOfferForm = () => {
           </p>
           <Divider />
           <div className={styles.form_actions__wrapper}>
-            {/* TODO: Create global shared component */}
-            <button type="button" onClick={() => methods.reset()}>
+            <Button variant="secondary" onClick={() => methods.reset()}>
               Cancel
-            </button>
-            <button type="submit">SUBMIT</button>
+            </Button>
+            <Button type="submit">SUBMIT</Button>
           </div>
         </form>
       </div>
