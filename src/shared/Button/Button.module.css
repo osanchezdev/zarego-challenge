@@ -1,0 +1,43 @@
+.button__wrapper {
+}
+
+.button_default {
+  padding: 7px 10px;
+  border: none;
+  min-width: 90px;
+  text-align: center;
+  cursor: pointer;
+}
+.button_default:disabled {
+  cursor: default;
+}
+
+.button_primary,
+.button_primary:focus,
+.button_primary:active,
+.button_primary:active:focus,
+.button_secondary,
+.button_secondary:focus,
+.button_secondary:active,
+.button_secondary:active:focus {
+  outline: none;
+}
+
+.button_primary {
+  background: #666;
+  color: #eee;
+  letter-spacing: 1px;
+
+  transition: background 300ms ease;
+}
+.button_primary:hover {
+  background: #444;
+}
+
+.button_secondary {
+  background: #eee;
+  color: #666;
+  letter-spacing: 1px;
+
+  transition: background 300ms ease;
+}

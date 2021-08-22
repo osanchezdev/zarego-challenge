@@ -1,0 +1,28 @@
+.school_form__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.school_form_item {
+  flex: 0 0 30%;
+  min-height: 100px;
+}
+
+@media only screen and (max-width: 600px) {
+  .school_form__wrapper {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 5px;
+    margin-bottom: 20px;
+  }
+
+  .school_form_item {
+    flex: 0 0 100%;
+    min-height: 100px;
+  }
+}

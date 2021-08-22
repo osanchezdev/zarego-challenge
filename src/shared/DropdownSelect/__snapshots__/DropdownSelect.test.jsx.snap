@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DropdownSelect component snapshot should render component 1`] = `
+<div
+  className="dropdown_select__wrapper"
+>
+  <div
+    className="select_label__wrapper"
+  >
+    <label
+      className="select_label"
+      htmlFor="nameField"
+    >
+      labelTest
+    </label>
+  </div>
+  <div
+    className="select__wrapper"
+  >
+    <select
+      className="select "
+      defaultValue="null"
+      id="nameField"
+      name="nameField"
+      onBlur={[MockFunction]}
+      onChange={[MockFunction]}
+    >
+      <option
+        disabled={true}
+        value="null"
+      >
+        Select
+      </option>
+      <option
+        className="select_option"
+        value="Freshman Student"
+      >
+        Freshman Student
+      </option>
+      <option
+        className="select_option"
+        value="Transfer Student"
+      >
+        Transfer Student
+      </option>
+      <option
+        className="select_option"
+        value="Graduate Student"
+      >
+        Graduate Student
+      </option>
+      <option
+        className="select_option"
+        value="International Student"
+      >
+        International Student
+      </option>
+    </select>
+  </div>
+</div>
+`;

@@ -1,0 +1,10 @@
+.app {
+  height: 100vh;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+}
+
+.app_logo__wrapper {
+  text-align: center;
+}

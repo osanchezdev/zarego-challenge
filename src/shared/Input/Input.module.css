@@ -1,0 +1,66 @@
+.input__main_wrapper {
+  position: relative;
+}
+
+.input_label__wrapper {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.input__wrapper {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.input__prefix_text {
+  flex: 0 0 30px;
+  height: 38px;
+  font-size: 28px;
+  text-align: center;
+}
+
+.input {
+  flex: 1 1 auto;
+  height: 30px;
+  min-width: 182px;
+  font-size: 20px;
+  color: #666;
+}
+
+.input:focus,
+.input:active,
+.input:focus:active {
+  outline: none;
+}
+
+.input.input_error {
+  border: 2px inset #dc3545;
+}
+
+.input_icon_image {
+  background: transparent;
+  position: absolute;
+  max-width: 26px;
+  padding: 5px;
+}
+
+.input.input_icon {
+  padding-left: 35px;
+  min-width: 149px;
+}
+
+.input__error_msg_wrapper {
+  position: relative;
+  flex: 0 0 100%;
+}
+
+.input__with_prefix_text {
+  padding-left: 30px;
+}
+
+.input__error_msg {
+  position: relative;
+  margin: 0;
+  color: #dc3545;
+}

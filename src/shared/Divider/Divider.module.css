@@ -1,0 +1,17 @@
+.divider__wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.divider_text {
+  margin-right: 25px;
+  font-size: 24px;
+}
+
+.divider {
+  flex: 1 1 auto;
+  height: 2px;
+  background: #c1c1c1;
+}

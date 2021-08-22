@@ -1,0 +1,42 @@
+.grants_n_scholarships_section__wrapper {
+}
+
+.grants_n_scholarships_section_description {
+  margin-top: 5px;
+}
+
+.grants_n_scholarships_section__form_wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.grants_n_scholarships_section__form_item {
+  flex: 0 0 calc(50% - 60px);
+  display: grid;
+  min-height: 200px;
+  align-content: baseline;
+  padding: 10px 30px;
+}
+
+.grants_n_scholarships_section__form_item_title {
+  font-size: 24px;
+  margin: 0 0 15px 0;
+}
+
+.grants_n_scholarships_section__total_wrapper {
+  font-size: 24px;
+  margin-top: 0;
+  padding: 0 20px;
+}
+
+.grants_n_scholarships_section__total_amount {
+  margin-left: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+  .grants_n_scholarships_section__form_item {
+    flex: 0 0 100%;
+  }
+}

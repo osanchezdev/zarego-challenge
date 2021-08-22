@@ -1,0 +1,38 @@
+/* Global styles */
+
+body {
+  background: #eee;
+  color: #8b8b8b;
+  overflow: hidden;
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 300;
+}
+
+select:focus,
+select:active,
+select:focus:active,
+input:focus,
+input:active,
+input:focus:active {
+  outline: none;
+}
+
+/* Hack for disdable autocomplete Chrome colors */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-transition: 'color 9999s ease-out, background-color 9999s ease-out';
+  -webkit-transition-delay: 9999s;
+}

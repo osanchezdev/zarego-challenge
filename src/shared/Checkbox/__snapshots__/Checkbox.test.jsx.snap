@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Checkbox component snapshot should render component 1`] = `
+<div
+  className="checkbox__wrapper"
+>
+  <div
+    className="checkbox_input__wrapper"
+  >
+    <input
+      className="checkbox_input"
+      id="fieldName"
+      name="fieldName"
+      type="checkbox"
+    />
+  </div>
+  <div
+    className="checkbox_label__wrapper"
+  >
+    <label
+      className="checkbox_label"
+      htmlFor="fieldName"
+    >
+      labelTest
+    </label>
+  </div>
+</div>
+`;
